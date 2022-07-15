@@ -49,7 +49,7 @@ if __name__ == '__main__':
        assert test_answer == test['answer'], f'Error on test case {i} for simple solution, got {test_answer}, expected {test["answer"]}'
 
 
-    print("Tests for simple solution:")
+    print("Tests for fast solution:")
     for i, test in enumerate(tests):
        test_answer = task_fast(test['data'])
        assert test_answer == test['answer'], f'Error on test case {i} for fast solution, got {test_answer}, expected {test["answer"]}'
