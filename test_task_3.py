@@ -20,7 +20,6 @@ def appearance(intervals: dict):
 
         return res_lst
 
-    
     res_lst = []
     for _, val in intervals.items():
         add_marker_and_sort(val) # add markers to starts and stops, then sorting
@@ -35,12 +34,6 @@ def appearance(intervals: dict):
     res = sum([t * (-s) for t, s in res_lst])
 
     return res#, appearence_times, res_lst
-
-
-
-    
-
-
 
 
 tests = [
@@ -75,13 +68,6 @@ tests = [
     'answer': 3565
     },
 ]
-
-
-# res = appearance(tests[1]['data'])
-
-# print('res: ', res)
-# print('appearence_times: ', *appearence_times)
-# print('res_lst: ', *res_lst)
 
 
 if __name__ == '__main__':
