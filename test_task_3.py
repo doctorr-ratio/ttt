@@ -1,12 +1,12 @@
-def appearance(intervals: dict):
+def appearance(intervals: dict) -> int:
     '''function to get the duration of simultaneous presence'''
-    def add_marker_and_sort(lst: list):
+    def add_marker_and_sort(lst: list) -> None:
         '''function to add marker (1 for entry, -1 for leave) to list element inplace, then sort'''
         lst[0::2] = [(elem, 1) for elem in lst[0::2]]
         lst[1::2] = [(elem, -1) for elem in lst[1::2]]
         lst.sort(key=lambda x: x[0])
 
-    def process_times(lst: list, full: int = 1):
+    def process_times(lst: list, full: int = 1) -> list:
         '''function to return intervals with right overlapping'''
         cur = 0
         res_lst = []
