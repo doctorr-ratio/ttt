@@ -1,5 +1,5 @@
 def appearance(intervals: dict):
-
+    '''function to get the duration of simultaneous presence'''
     def add_marker_and_sort(lst: list):
         '''function to add marker (1 for entry, -1 for leave) to list element inplace, then sort'''
         lst[0::2] = [(elem, 1) for elem in lst[0::2]]
@@ -33,7 +33,7 @@ def appearance(intervals: dict):
     # sum over differences in time
     res = sum([t * (-s) for t, s in res_lst])
 
-    return res#, appearence_times, res_lst
+    return res
 
 
 tests = [
